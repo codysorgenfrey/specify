@@ -1,46 +1,58 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-
 import { Button } from "@fluentui/react-components";
+import { Calendar20Regular } from "@fluentui/react-icons";
 
 const meta: Meta<typeof Button> = {
   title: "Example/Button",
   component: Button,
+  argTypes: {
+    appearance: {
+      options: ["primary", "secondary", "outline", "subtle", "transparent"],
+      control: { type: "radio" },
+    },
+    size: {
+      options: ["small", "medium", "large"],
+      control: { type: "radio" },
+    },
+    shape: {
+      options: ["rounded", "circular", "square"],
+      control: { type: "radio" },
+    },
+    disabled: {
+      control: { type: "boolean" },
+    },
+    disabledFocusable: {
+      control: { type: "boolean" },
+    },
+    icon: {
+      control: { type: "object" },
+    },
+    iconPosition: {
+      options: ["before", "after"],
+      control: { type: "radio" },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    appearance: "primary",
-    children: "Primary",
+    children: "Button",
   },
 };
 
-export const Secondary: Story = {
+export const WithIcon: Story = {
   args: {
-    appearance: "secondary",
-    children: "Secondary",
+    children: "Button",
+    icon: <Calendar20Regular />,
   },
 };
 
-export const Outline: Story = {
+export const IconOnly: Story = {
   args: {
-    appearance: "outline",
-    children: "Outline",
-  },
-};
-
-export const Subtle: Story = {
-  args: {
-    appearance: "subtle",
-    children: "Subtle",
-  },
-};
-
-export const Transparent: Story = {
-  args: {
-    appearance: "transparent",
-    children: "Transparent",
+    icon: <Calendar20Regular />,
   },
 };

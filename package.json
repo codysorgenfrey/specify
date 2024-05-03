@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "@fluentui/react-components": "^9.49.1",
+    "@fluentui/react-icons": "^2.0.238",
     "@storybook/addon-essentials": "8.0.0",
     "@storybook/addon-interactions": "8.0.0",
     "@storybook/addon-links": "8.0.0",
