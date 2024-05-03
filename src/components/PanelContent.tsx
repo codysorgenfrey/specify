@@ -1,14 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useParameter } from "@storybook/manager-api";
-
-type SpecifyParameters = {
-  componentParts?: string[];
-};
 
 export const PanelContent: React.FC = () => {
   const [doc, setDoc] = useState<Document | undefined>(undefined);
-  const { componentParts } = useParameter("specify", null) as SpecifyParameters;
-  console.log("componentParts", componentParts);
 
   useEffect(() => {
     const iframe = document.getElementById(
@@ -44,11 +37,12 @@ export const PanelContent: React.FC = () => {
   }, []);
 
   if (!doc) {
+    console.warn("No document found");
     return <div>Loading...</div>;
   }
 
   const components = Array.from(doc.querySelector("#storybook-root")?.children);
-  components.map((component, i) => {
+  return components.map((component) => {
     const style = window.getComputedStyle(component);
     return (
       <div>

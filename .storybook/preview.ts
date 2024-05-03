@@ -1,10 +1,9 @@
 import type { Preview } from "@storybook/react";
+import { FluentDecorator } from "./fluentDecorator";
 
 const preview: Preview = {
   parameters: {
-    backgrounds: {
-      default: "light",
-    },
+    layout: "fullscreen",
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
@@ -13,6 +12,7 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [FluentDecorator],
 };
 
 export default preview;

@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "description": "A storybook addon that auto-generates specs for components",
   "keywords": [
-    "storybook-addons", "specs", "css", "inspect", "specify", "storybook-addons"
+    "storybook-addons",
+    "specs",
+    "css",
+    "inspect",
+    "specify",
+    "storybook-addons"
   ],
   "repository": {
     "type": "git",
@@ -45,6 +50,7 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@fluentui/react-components": "^9.49.1",
     "@storybook/addon-essentials": "8.0.0",
     "@storybook/addon-interactions": "8.0.0",
     "@storybook/addon-links": "8.0.0",
@@ -98,7 +104,15 @@
   "storybook": {
     "displayName": "Specify",
     "supportedFrameworks": [
-      "react", "vue", "angular", "web-components", "ember", "html", "svelte", "preact", "react-native"
+      "react",
+      "vue",
+      "angular",
+      "web-components",
+      "ember",
+      "html",
+      "svelte",
+      "preact",
+      "react-native"
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   }
